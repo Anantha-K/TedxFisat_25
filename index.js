@@ -18,8 +18,8 @@ circles.forEach((circle, index) => {
 
 ScrollTrigger.create({
     trigger: "#home",
-    start: "top top", // When home section starts
-    end: "bottom end", // When home section ends
+    start: "top top",
+    end: "bottom end", 
     // markers: true,
     onToggle: self => {
         animations.forEach(anim => {
@@ -33,7 +33,7 @@ ScrollTrigger.create({
 });
 
 gsap.fromTo(
-    ".circle",  // Make sure this selector matches your HTML
+    ".circle",
     {
         scale: 1,
     },
@@ -42,11 +42,11 @@ gsap.fromTo(
         scale: 10,
         scrollTrigger: {
             trigger: "#Nothome",
-            start: "top bottom", // Changed to align with first ScrollTrigger's end
-            end: "top 100",      // Changed to make the animation complete sooner
-            scrub: 1,              // Added smoothing to the scrub
+            start: "top bottom", 
+            end: "top 100",
+            scrub: 1,            
             // markers: true,
-            toggleActions: "play none none reverse"  // Modified for better control
+            //toggleActions: "play none none reverse"
         },
     }
 );
