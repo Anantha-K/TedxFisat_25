@@ -1,0 +1,38 @@
+
+a[href^="tel"] {
+    color: black !important;
+    text-decoration: none !important;
+}
+
+
+@media screen and (max-width: 480px) {
+    .Footer {
+      height: fit-content !important;
+      padding-bottom: 20px;
+      width: 100vw !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+  
+    }
+  
+    footer {
+      height: fit-content !important;
+      width: 90vw !important;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+  
+    }
+  
+    footer>div {
+      width: 100% !important;
+    }
+  
+    .footer-third {
+      display: flex;
+      align-items: center;
+      gap: 20px
+    }
+}  
