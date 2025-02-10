@@ -18,7 +18,7 @@ circles.forEach((circle, index) => {
 
 ScrollTrigger.create({
     trigger: "body",
-    start: "top top",
+    start: "top -10",
     end: "bottom end", 
     // markers: true,
     onToggle: self => {
@@ -43,9 +43,9 @@ gsap.fromTo(
         scrollTrigger: {
             trigger: "#Nothome",
             start: "top bottom", 
-            end: "top 100",
+            end: "bottom bottom",
             scrub: 1,            
-            // markers: true,
+            markers: true,
             //toggleActions: "play none none reverse"
         },
     }
