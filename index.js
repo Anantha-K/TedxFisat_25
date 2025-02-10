@@ -17,7 +17,7 @@ circles.forEach((circle, index) => {
 });
 
 ScrollTrigger.create({
-    trigger: "#home",
+    trigger: "body",
     start: "top top",
     end: "bottom end", 
     // markers: true,
@@ -38,8 +38,8 @@ gsap.fromTo(
         scale: 1,
     },
     {
-        backgroundColor:"#000",
-        scale: 10,
+        opacity:0,
+        scale: 7,
         scrollTrigger: {
             trigger: "#Nothome",
             start: "top bottom", 
