@@ -51,6 +51,75 @@ gsap.fromTo(
     }
 );
 
+gsap.fromTo(
+    ".videoDiv",
+    {
+        scale:0
+    },
+    {
+        scale:1,
+        scrollTrigger: {
+            trigger: ".videoDiv",
+            toggleActions: "play none none reverse",
+        },
+    }
+);
+
+gsap.fromTo(
+    ".fa-play",
+    {
+        opacity:1
+    },
+    {
+        opacity:0,
+        scrollTrigger: {
+            trigger: "#video",
+            start: "top 200", 
+            end: "top 100",
+            scrub: 1,            
+            markers: true,
+            //toggleActions: "play none none reverse"
+        },
+    }
+);
+
+gsap.fromTo(
+    ".fa-pause",
+    {
+        opacity:0
+    },
+    {
+        opacity:1,
+        scrollTrigger: {
+            trigger: "#video",
+            start: "top 200", 
+            end: "top 100",
+            scrub: 1,            
+            markers: true,
+            //toggleActions: "play none none reverse"
+        },
+    }
+);
+
+gsap.fromTo(
+    ".videoDiv",
+    {
+        opacity:1
+    },
+    {
+        opacity:0,
+        scale:1.5,
+        scrollTrigger: {
+            trigger: "#video",
+            start: "top 100", 
+            end: "bottom bottom",
+            scrub: 1,            
+            markers: true,
+            //toggleActions: "play none none reverse"
+        },
+    }
+);
+
 
 
 
