@@ -18,7 +18,7 @@ circles.forEach((circle, index) => {
 
 ScrollTrigger.create({
     trigger: "body",
-    start: "top -10",
+    start: "top top",
     end: "bottom end", 
     // markers: true,
     onToggle: self => {
