@@ -152,7 +152,7 @@ gsap.fromTo(
             start: "top bottom", 
             end: "bottom center",
             scrub: 1,            
-            markers: true,
+            //markers: true,
             //toggleActions: "play none none reverse"
         },
     }
