@@ -101,44 +101,44 @@ footer {
 
 @media screen and (max-width: 480px) {
   .Footer {
-      height: fit-content !important;
-      padding-bottom: 20px;
-      width: 100vw !important;
-      display: flex !important;
-      align-items: center !important;
-      justify-content: center !important;
+    height: fit-content !important;
+    padding-bottom: 20px;
+    width: 100vw !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
   }
 
   footer {
-      height: fit-content !important;
-      width: 90vw !important;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-evenly;
+    height: fit-content !important;
+    width: 90vw !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
   }
 
-  footer > div {
-      width: 100% !important;
+  footer>div {
+    width: 100% !important;
   }
 
   .footer-third {
-      display: flex;
-      align-items: center;
-      gap: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
   }
 
   .section-wrapper {
-      flex-direction: column;
-      font-size: 0.8em;
+    flex-direction: column;
+    font-size: 0.8em;
   }
 
   .About-img-wrapper {
-      width: 70vw;
-      height: 50vh;
+    width: 70vw;
+    height: 50vh;
   }
 
   .reveal-heading {
-      font-size: 3em;
+    font-size: 3em;
   }
 }

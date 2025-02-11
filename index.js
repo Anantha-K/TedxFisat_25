@@ -38,12 +38,12 @@ gsap.fromTo(
         scale: 1,
     },
     {
-        backgroundColor:"#000",
-        scale: 10,
+        opacity:0,
+        scale: 6,
         scrollTrigger: {
             trigger: "#Nothome",
             start: "top bottom", 
-            end: "top 100",
+            end: "bottom center",
             scrub: 1,            
             // markers: true,
             //toggleActions: "play none none reverse"
