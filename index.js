@@ -74,10 +74,10 @@ gsap.fromTo(
         opacity:0,
         scrollTrigger: {
             trigger: "#video",
-            start: "top 200", 
-            end: "top 100",
+            start: "top 250", 
+            end: "bottom bottom",
             scrub: 1,            
-            markers: true,
+            //markers: true,
             //toggleActions: "play none none reverse"
         },
     }
@@ -92,10 +92,10 @@ gsap.fromTo(
         opacity:1,
         scrollTrigger: {
             trigger: "#video",
-            start: "top 200", 
-            end: "top 100",
+            start: "top 250", 
+            end: "bottom bottom",
             scrub: 1,            
-            markers: true,
+            //markers: true,
             //toggleActions: "play none none reverse"
         },
     }
@@ -111,8 +111,46 @@ gsap.fromTo(
         scale:1.5,
         scrollTrigger: {
             trigger: "#video",
+            start: "top 250", 
+            end: "bottom bottom",
+            scrub: 1,            
+            //markers: true,
+            //toggleActions: "play none none reverse"
+        },
+    }
+);
+
+gsap.fromTo(
+    ".videoVideo",
+    {
+        opacity:0,
+        transform:"rotate(10deg)"
+    },
+    {
+        opacity:1,
+        transform:"rotate(0deg)",
+        scrollTrigger: {
+            trigger: "#video",
             start: "top 100", 
             end: "bottom bottom",
+            scrub: 1,            
+            //markers: true,
+            //toggleActions: "play none none reverse"
+        },
+    }
+);
+
+gsap.fromTo(
+    "#video",
+    {
+        opacity:1
+    },
+    {
+        opacity:0,
+        scrollTrigger: {
+            trigger: "#Notvideo",
+            start: "top bottom", 
+            end: "bottom center",
             scrub: 1,            
             markers: true,
             //toggleActions: "play none none reverse"
