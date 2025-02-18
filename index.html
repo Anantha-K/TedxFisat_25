@@ -7,13 +7,36 @@
     <title>TEDxFISAT 2025</title>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-   
+	<script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis"></script>
+
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Aladin&family=Audiowide&family=Bebas+Neue&family=Pattaya&display=swap"
+      rel="stylesheet"
+    />
+    
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="Style.css"></link>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
 </head>
 <body style="margin: 0; padding: 0;background: #000;">
+
+    <nav class="navbar" style="display:flex;justify-content: space-evenly;align-items: center;z-index: 99;opacity:0;border-radius:10px;backdrop-filter: blur(10px);background-color: rgba(0, 0, 0, 0.2);top:30px;position: fixed;width:90vw;left:5vw;height:10vh;border: 0.5px solid rgba(157, 159, 161,0.5);">
+        <a href="#About">ABOUT</a>
+        <a href="">SPEAKERS</a>
+        <a href="/Registration.html">REGISTRATION</a>
+        <a href="">PRE EVENTS</a>
+        <a href="">CONTACT US</a>
+    </nav>
+
     <section id="home" style="width: 100vw; height: 100vh;  overflow: hidden;z-index: -1;">
         <div class="circle" style="position:fixed;width:300px;height:300px;background-color: #CE4B4B;border-radius: 100%;left: calc(100vw - 150px);top: calc(100vh - 150px);z-index: 3;box-shadow: 0 0 10px rgba(0, 0, 0,0.25);"></div>
         <div class="circle" style="position:fixed;width:350px;height:350px;background-color: #CE4B4B;border-radius: 100%;left: calc(100vw - 175px);top: calc(100vh - 175px);z-index: 2;opacity: 0.6;box-shadow: 0 0 10px rgba(0, 0, 0,0.25);"></div>
@@ -28,39 +51,39 @@
             <i class="fa fa-play" style="color:#000;font-size: 30px;position:absolute;"></i>
             <i class="fa fa-pause" style="color:#000;font-size: 30px;position:absolute;opacity: 0;"></i>
         </div>
-        <video class="videoVideo" src="./vBW.mp4" style="height:100%;width: 100%;object-fit: cover;" autoplay muted loop></video>
+        <video class="videoVideo" src="./v2.mp4" style="height:100%;width: 100%;object-fit: cover;" autoplay muted loop></video>
     </section>
 
     <section id="Notvideo" style="height: 50vh;">
     </section>
 
 
-    <div class="bottom-layer">
+    <div class="bottom-layer" id="About">
       <div class="section-wrapper">
-          <div style="width: 70%;">
-              <p class="reveal-heading">
+          <div class="about-text" style="width: 70%;">
+              <p class="reveal-heading" style='font-family: "Bebas Neue", serif;'>
                   <span>OUR</span> THEME
               </p>
-              <p class="reveal-text" data-bg-color="#606060" data-fg-color="white">
+              <p class="reveal-text" data-bg-color="#606060" data-fg-color="white" style='font-family: "Montserrat", serif;'>
                   TEDxFISAT 2025 focuses on "Ripple Effect" highlighting the transformative process of reshaping core elements across sectors. This theme emphasizes the profound impact foundational changes can have on broader frameworks and mindsets. Discussions will explore innovative approaches for promoting positive change and evolution within fundamental structures. TEDxFISAT aims to foster conversations about sustainable progress and holistic development, recognizing the significance of catalyzing improvements while navigating potential challenges.
               </p>
           </div>
           <div class="About-img-wrapper">
-              <div></div>
-              <img src="/api/placeholder/400/400" alt="Theme">
+              <div style="background: linear-gradient(135deg, #8B0000, #E62B1E);"></div>
+              <img src="./ak.jpg" alt="Theme" style="border-radius: 5px;">
           </div>
       </div>
 
-      <div class="section-wrapper">
+      <div class="section-wrapper" id="section-wrapper-2">
           <div class="About-img-wrapper">
-              <div></div>
-              <img src="/api/placeholder/400/400" alt="Logo">
+              <div style="background: linear-gradient(135deg, #8B0000, #E62B1E);"></div>
+              <img src="./ak.jpg" alt="Logo" style="border-radius: 5px;">
           </div>
-          <div style="width: 70%;">
-              <p class="reveal-heading">
-                  TEDx<span>FISAT</span>
+          <div class="about-text" style="width: 70%;">
+              <p class="reveal-heading" style='font-family: "Bebas Neue", serif;'>
+                  TED <span>FISAT</span>
               </p>
-              <p class="reveal-text" data-bg-color="#606060" data-fg-color="white">
+              <p class="reveal-text" data-bg-color="#606060" data-fg-color="white" style='font-family: "Montserrat", serif;'>
                   TEDxFISAT, which stemmed from TED's mission to research and discover "ideas worth spreading," emerged in 2017, aiming to cultivate an inclusive community of thought leaders dedicated to making a positive impact on society. Organised by undergraduate student directors and staff advisors, TEDxFISAT provides events and resources to enrich FISAT's community. In 2018, our inaugural conference, BREATHTAKING DISARRAY, featured over ten speakers and four performances. We believe in the power of ideas to transform lives and aim to curate knowledge from the region's brightest minds, fostering an environment for engagement and curiosity.
               </p>
           </div>
@@ -69,15 +92,18 @@
 
 
 
+    <section>
+        <div></div>
+    </section>
 
-<section class="base-template">
+<!-- <section class="base-template">
 	<div class="wrapper base-template__wrapper">
 		
 
 		<div class="base-template__content">
 			<div class="emotions-slider">
 
-				<!-- Slider Navigation -->
+				
 
 				<div class="emotions-slider__nav slider-nav">
 					<div tabindex="0" class="slider-nav__item slider-nav__item_prev">
@@ -92,12 +118,12 @@
 					</div>
 				</div>
 
-				<!-- Slider Content -->
+				
 
 				<div class="emotions-slider__slider swiper">
 					<div class="emotions-slider__wrapper swiper-wrapper">
 
-						<!-- Slider: Slide 1 -->
+						
 
 						<div class="emotions-slider__slide swiper-slide">
 							<div class="emotions-slider__item emotions-slider-item">
@@ -119,7 +145,7 @@
 							</div>
 						</div>
 
-						<!-- Slider: Slide 2 -->
+						
 
 						<div class="emotions-slider__slide swiper-slide">
 							<div class="emotions-slider__item emotions-slider-item">
@@ -180,7 +206,7 @@
 								</div>
 							</div>
 						</div>
-						<!-- Slider: Slide 3 -->
+						
 
 						<div class="emotions-slider__slide swiper-slide">
 							<div class="emotions-slider__item emotions-slider-item">
@@ -209,8 +235,7 @@
 							</div>
 						</div>
 
-						<!-- Slider: Slide 4 -->
-
+						
 						<div class="emotions-slider__slide swiper-slide">
 							<div class="emotions-slider__item emotions-slider-item">
 								<div class="emotions-slider-item__image">
@@ -251,7 +276,7 @@
 							</div>
 						</div>
 
-						<!-- Slider: Slide 5 -->
+				
 
 						<div class="emotions-slider__slide swiper-slide">
 							<div class="emotions-slider__item emotions-slider-item">
@@ -295,7 +320,6 @@
 							</div>
 						</div>
 
-						<!-- Slider: Slide 6 -->
 
 						<div class="emotions-slider__slide swiper-slide">
 							<div class="emotions-slider__item emotions-slider-item">
@@ -337,7 +361,6 @@
 							</div>
 						</div>
 
-						<!-- Slider: Slide 7 -->
 
 						<div class="emotions-slider__slide swiper-slide">
 							<div class="emotions-slider__item emotions-slider-item">
@@ -379,7 +402,6 @@
 							</div>
 						</div>
 
-						<!-- Slider: Slide 8 -->
 
 						<div class="emotions-slider__slide swiper-slide">
 							<div class="emotions-slider__item emotions-slider-item">
@@ -423,7 +445,7 @@
 							</div>
 						</div>
 
-						<!-- Slider: Slide 9 -->
+						
 
 						<div class="emotions-slider__slide swiper-slide">
 							<div class="emotions-slider__item emotions-slider-item">
@@ -467,64 +489,146 @@
 					</div>
 				</div>
 
-				<!-- Slider Pagination -->
+			
 
 				<div class="emotions-slider__pagination slider-pagination"></div>
 
 			</div>
 		</div>
 	</div>
-</section>
+</section> -->
+
+
+
+
+<!-- Speakers -->
+ <div class="container">
+	<h1 style="text-align: center; font-size: 3.5em; margin-top: 20px;">Speakers</h1>
+<div class="carousel">
+	<div class="carousel-item">
+		<div class="carousel-box">
+			<div class="title">T D Ramakrishnan</div>
+			<div class="num">01</div>
+			<img src="./Speakers/hi.jpeg" alt="T D Ramakrishnan" />
+		</div>
+	</div>
+
+	<div class="carousel-item">
+		<div class="carousel-box">
+			<div class="title">Anu Suraj</div>
+			<div class="num">02</div>
+			<img src="./Speakers/AnuSuraj.jpeg" alt="Anu Suraj" />
+		</div>
+	</div>
+
+	<div class="carousel-item">
+		<div class="carousel-box">
+			<div class="title">Gouri Krishna</div>
+			<div class="num">03</div>
+			<img src="./Speakers/GouriKrishna.jpeg" alt="Gouri Krishna" />
+		</div>
+	</div>
+
+	<div class="carousel-item">
+		<div class="carousel-box">
+			<div class="title">Salini</div>
+			<div class="num">04</div>
+			<img src="./Speakers/salini.jpeg" alt="Salini" />
+		</div>
+	</div>
+	<div class="carousel-item">
+		<div class="carousel-box">
+			<div class="title">Salini</div>
+			<div class="num">05</div>
+			<img src="./Speakers/salini.jpeg" alt="Salini" />
+		</div>
+	</div>
+	<div class="carousel-item">
+		<div class="carousel-box">
+			<div class="title">Salini</div>
+			<div class="num">06</div>
+			<img src="./Speakers/salini.jpeg" alt="Salini" />
+		</div>
+	</div>
+	<div class="carousel-item">
+		<div class="carousel-box">
+			<div class="title">Salini</div>
+			<div class="num">04</div>
+			<img src="./Speakers/salini.jpeg" alt="Salini" />
+		</div>
+	</div>
+	<div class="carousel-item">
+		<div class="carousel-box">
+			<div class="title">Salini</div>
+			<div class="num">04</div>
+			<img src="./Speakers/salini.jpeg" alt="Salini" />
+		</div>
+	</div>
+</div>
+</div>
+
+
+
+
 
 
 
     <section class="Footer" style="height: fit-content;color: #000; padding-bottom: 5px; z-index: 999;">
-        <footer style="display:flex;height:90%;width:92%;background: linear-gradient(to right, #CE4B4B, #8B2D2D);
-;margin-left:4%; margin-top: 2.5%;border-radius: 15px;">
+        <footer style="display:flex;height:90%;width:92%;margin-left:4%; margin-top: 2.5%;border-radius: 15px;padding: 20px 0;">
             <div style="display:flex;justify-content:center;align-items: center;border-right:1px solid black; width:30%">
               <img src="./logo.png" width="40%"/>
             </div>
             <div class="contact-section" style="padding: 2rem; border-right: 1px solid #000; width:700px;">
-              <h2 style="text-align: center; margin-bottom: 1.5rem; font-size: 1.2rem;">Contact Us</h2>
-              <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.5rem; margin-left: 1rem;">
-                <div style="font-size: 0.8rem;">
-                  <p><strong>Albin Wilson</strong><br><a href="tel:8086396967">80863 96967</a></p>
+              <p style='text-align: center; margin-bottom: 1.5rem; font-size: 2rem;font-family: "Bebas Neue", serif;'>Contact Us</p>
+              <div style="display: flex; gap: 0.5rem; margin-left: 1rem;justify-content: space-evenly;flex-wrap: wrap;">
+                <div style="font-size: 0.8rem;width: 40%;text-align: center;font-size: 1rem;">
+                  <p><strong>Muhammad Althaf</strong><br><a href="tel:8086396967">9061104922</a></p>
                 </div>
-                <div style="font-size: 0.8rem;">
-                  <p><strong>Nandhana Prasad</strong><br><a href="tel:8078444278">80784 44278</a></p>
+                <div style="font-size: 0.8rem;width: 40%;text-align: center;font-size: 1rem;">
+                  <p><strong>Sona M S</strong><br><a href="tel:8078444278">9746585739</a></p>
                 </div>
-                <div style="font-size: 0.8rem;">
-                  <p><strong>Mohamed Alfaz</strong><br><a href="tel:9497029288">94970 29288</a></p>
+                <div style="font-size: 0.8rem;width: 40%;text-align: center;margin:10px ;font-size: 1rem;">
+                  <p><strong>Nandana U</strong><br><a href="tel:9497029288">7907513285</a></p>
                 </div>
-                <div style="font-size: 0.8rem;">
-                  <p><strong>Aravind S Kumar</strong><br><a href="tel:8590321385">85903 21385</a></p>
+                <div style="font-size: 0.8rem;width: 40%;text-align: center;margin:10px ;font-size: 1rem;">
+                  <p><strong>Vyshnavy T M</strong><br><a href="tel:8590321385">8301904407</a></p>
                 </div>
               </div>
             </div>
-            <div class="" style="width: 32%;padding-left: 3%;">
-                <p style="font-family: 'Bebas Neue', serif; font-size: 1.5rem;">Send a Message</p>
-                <div style="display: flex; align-items: center; gap: 5px; width: 100%; max-width: 500px; margin: auto;">
-                    <input 
-                        type="text" 
-                        placeholder="Type your message..." 
-                        style="background-color:#000; border:none;color: white; border-right: none; height: 40px; border-radius: 50px 0 0 50px; padding: 0 15px; width: 70%; font-size: 1rem; outline: none;"
-                    >
-                    <button 
-                        style="background-color: #000; border: none; border-radius: 0 50px 50px 0; height: 40px; width: 50px; display: flex; align-items: center; justify-content: center; cursor: pointer;"
-                    >
-                        <i class="fas fa-paper-plane" style="color: white; font-size: 1.2rem;"></i>
-                    </button>
+            <div class="footer3" style="width: 32%;padding-left: 3%;">
+                <div class="footer-third">
+                    <p style="font-family: 'Bebas Neue', serif; font-size: 2rem;">Send a Message</p>
+                    <div id="comment" style="display: flex; align-items: center; width: 100%; max-width: 500px; margin: auto;">
+                        <input 
+                            type="text" 
+                            placeholder="Type your message..." 
+                            style="background-color:#000; border:none;color: white; height: 40px; border-radius: 50px 0 0 50px; padding: 0 15px; width: 70%; font-size: 1rem; outline: none;margin: 15px 0;"
+                        >
+                        <button 
+                            style="background-color: #000;border:none; border-radius: 0 50px 50px 0; height: 40px; width: 50px; display: flex; align-items: center; justify-content: center; cursor: pointer;margin:0"
+                        >
+                            <i class="fas fa-paper-plane" style="color: white; font-size: 1.2rem;"></i>
+                        </button>
+                    </div>
                 </div>
                 <div class="footer-third">
-                  <p style="font-family: 'Bebas Neue', serif; font-size: 1.5rem;">Follow Us</p>
-                  <a href="https://www.instagram.com/incepto_fisat?igsh=ZTd2dThnY2lwczNk" style="text-decoration: none; color: #000;">
-                      <i class="fab fa-instagram" style="font-size: 24px;"></i>
-
-                  </a>
-                  <a href="https://m.facebook.com/fisat.incepto/" style="text-decoration: none; color: #000; margin-left: 20px;">
-                    <i class="fab fa-facebook" style="font-size: 24px;"></i>
-
-                </a>
+                  <p style="font-family: 'Bebas Neue', serif; font-size: 2rem;margin-bottom: 10px;">Follow Us</p>
+                  <div style="padding:0;margin:0">
+                      <a class="socials" href="https://www.instagram.com/tedxfisat25?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" style="text-decoration: none; color: #000;">
+                          <i class="fab fa-instagram" style="font-size: 24px;"></i>
+                      </a>
+                      <a class="socials" href="https://m.facebook.com/fisat.incepto/" style="text-decoration: none; color: #000; margin-left: 20px;">
+                        <i class="fab fa-facebook" style="font-size: 24px;"></i>
+                      </a>
+                      <a class="socials" href="https://x.com/TEDxFISAT2025" style="text-decoration: none; color: #000; margin-left: 20px;">
+                        <i class="fab fa-twitter" style="font-size: 24px;"></i>
+                      </a>
+                      <a class="socials" href="https://www.linkedin.com/company/tedxfisat/posts/?feedView=all" style="text-decoration: none; color: #000; margin-left: 20px;">
+                        <i class="fab fa-linkedin" style="font-size: 24px;"></i>
+                      </a>
+                  </div>
+                  
+                
                 </div>
                 
             </div>
