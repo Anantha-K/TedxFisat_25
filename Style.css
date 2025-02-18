@@ -119,6 +119,10 @@ footer::after {
     justify-content: center !important;
   }
 
+  #comment {
+    justify-content: center;
+  }
+
   footer {
     height: fit-content !important;
     width: 90vw !important;
@@ -134,8 +138,16 @@ footer::after {
 
   .footer-third {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
     gap: 20px;
+  }
+
+  .footer3 p {
+    text-align: center;
+    width: 80vw;
+    margin-bottom: 0px;
   }
 
   .section-wrapper {
