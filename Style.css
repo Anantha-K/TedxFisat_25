@@ -150,13 +150,31 @@ footer::after {
     margin-bottom: 0px;
   }
 
+  body {
+    border: 1px solid;
+  }
+
+  .bottom-layer {
+    margin: 0;
+  }
+
   .section-wrapper {
     flex-direction: column;
+    width: 95vw;
     font-size: 0.8em;
+    margin: 2.5vw !important;
+  }
+
+  #section-wrapper-2 {
+    flex-direction: column-reverse !important;
+  }
+
+  .about-text {
+    width: 95% !important;
   }
 
   .About-img-wrapper {
-    width: 70vw;
+    width: 95% !important;
     height: 50vh;
   }
 
