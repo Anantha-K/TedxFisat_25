@@ -158,6 +158,24 @@ gsap.fromTo(
     }
 );
 
+gsap.fromTo(
+    ".navbar",
+    { 
+        opacity:0,
+        y:-200
+    },
+    { 
+        y:0,
+        opacity: 1, 
+        duration: 1, 
+        scrollTrigger: {
+            trigger: ".bottom-layer",
+            toggleActions: "play none none none"
+        }
+    }
+);
+
+
 
 
 
