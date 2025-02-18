@@ -16,7 +16,7 @@ a[href^="tel"] {
 }
 
 .bottom-layer {
-  margin: 2vw 0;
+  margin: 0 5vw;
   min-height: 100vh;
 }
 
@@ -59,7 +59,8 @@ a[href^="tel"] {
 }
 
 .reveal-text {
-  font-size: 1.2em;
+  color: #fdfdfd;
+  font-size: 1.15rem;
   line-height: 1.6;
   margin-bottom: 2rem;
 }
