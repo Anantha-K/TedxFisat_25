@@ -9,10 +9,10 @@
 <body>
     <div class="container">
         <div class="header">
-            <div class="tedx-logo">TEDx</div>
+            <img src="logo-white.png"  id="logo">
             <div class="subtitle">Registration Form</div>
         </div>
-
+        
         <form>
             <div class="section-title">Personal Information</div>
             <div class="form-grid">
@@ -20,17 +20,17 @@
                     <label for="name">Full Name</label>
                     <input type="text" id="name" required placeholder="Enter your full name">
                 </div>
-
+                
                 <div class="form-group">
                     <label for="email">Email Address</label>
                     <input type="email" id="email" required placeholder="Enter your email">
                 </div>
-
+                
                 <div class="form-group">
                     <label for="phone">Phone Number</label>
                     <input type="tel" id="phone" required placeholder="Enter your phone number">
                 </div>
-
+                
                 <div class="form-group">
                     <label for="gender">Gender</label>
                     <select id="gender" required>
@@ -40,44 +40,60 @@
                         <option value="other">Other</option>
                     </select>
                 </div>
-            </div>
-
-            <div class="section-title">Academic Information</div>
-            <div class="form-grid">
-                <div class="form-group">
-                    <label for="college">College Name</label>
-                    <input type="text" id="college" required placeholder="Enter your college name">
-                </div>
 
                 <div class="form-group">
-                    <label for="branch">Branch</label>
-                    <select id="branch" required>
-                        <option value="">Select branch</option>
-                        <option value="cse">Computer Science Engineering</option>
-                        <option value="ece">Electronics & Communication</option>
-                        <option value="eee">Electrical & Electronics</option>
-                        <option value="mech">Mechanical Engineering</option>
-                        <option value="civil">Civil Engineering</option>
-                        <option value="other">Other</option>
+                    <label for="isStudent">Are you a student?</label>
+                    <select id="isStudent" required onchange="toggleAcademicSection()">
+                        <option value="">Please select</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
                     </select>
                 </div>
 
-                <div class="form-group">
-                    <label for="semester">Semester</label>
-                    <select id="semester" required>
-                        <option value="">Select semester</option>
-                        <option value="1">1st Semester</option>
-                        <option value="2">2nd Semester</option>
-                        <option value="3">3rd Semester</option>
-                        <option value="4">4th Semester</option>
-                        <option value="5">5th Semester</option>
-                        <option value="6">6th Semester</option>
-                        <option value="7">7th Semester</option>
-                        <option value="8">8th Semester</option>
-                    </select>
+                <div class="form-group" id="occupationGroup" style="display: none;">
+                    <label for="occupation">Occupation</label>
+                    <input type="text" id="occupation" placeholder="Enter your occupation">
                 </div>
             </div>
-
+            
+            <div id="academicSection">
+                <div class="section-title">Academic Information</div>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="college">College Name</label>
+                        <input type="text" id="college" placeholder="Enter your college name">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="branch">Branch</label>
+                        <select id="branch">
+                            <option value="">Select branch</option>
+                            <option value="cse">Computer Science Engineering</option>
+                            <option value="ece">Electronics & Communication</option>
+                            <option value="eee">Electrical & Electronics</option>
+                            <option value="mech">Mechanical Engineering</option>
+                            <option value="civil">Civil Engineering</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="semester">Semester</label>
+                        <select id="semester">
+                            <option value="">Select semester</option>
+                            <option value="1">1st Semester</option>
+                            <option value="2">2nd Semester</option>
+                            <option value="3">3rd Semester</option>
+                            <option value="4">4th Semester</option>
+                            <option value="5">5th Semester</option>
+                            <option value="6">6th Semester</option>
+                            <option value="7">7th Semester</option>
+                            <option value="8">8th Semester</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            
             <div class="section-title">Payment Details</div>
             <div class="form-group">
                 <label for="payment">Upload Payment Screenshot</label>
@@ -85,9 +101,30 @@
                     <input type="file" id="payment" accept="image/*" required>
                 </div>
             </div>
-
+            
             <button type="submit">Submit Registration</button>
         </form>
     </div>
+
+    <script>
+        function toggleAcademicSection() {
+            const isStudent = document.getElementById('isStudent').value;
+            const academicSection = document.getElementById('academicSection');
+            const occupationGroup = document.getElementById('occupationGroup');
+            const academicInputs = academicSection.querySelectorAll('input, select');
+
+            if (isStudent === 'yes') {
+                academicSection.style.display = 'block';
+                occupationGroup.style.display = 'none';
+                academicInputs.forEach(input => input.required = true);
+                document.getElementById('occupation').required = false;
+            } else if (isStudent === 'no') {
+                academicSection.style.display = 'none';
+                occupationGroup.style.display = 'block';
+                academicInputs.forEach(input => input.required = false);
+                document.getElementById('occupation').required = true;
+            }
+        }
+    </script>
 </body>
 </html>
