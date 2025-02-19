@@ -454,3 +454,25 @@ menuToggle.addEventListener('click', () => {
     });
   }
 });
+
+
+
+
+
+gsap.fromTo(
+    ".redLines>div",
+    { 
+        y:0
+    },
+    { 
+        y:"-105vh",
+        opacity: 1, 
+        duration: 1,
+        stagger:0.3,
+        scrollTrigger: {
+            trigger: ".redLines",
+            toggleActions: "play none none none"
+        },
+        ease: "power1.inOut",
+    }
+);
