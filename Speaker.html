@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TEDx Speaker Profile</title>
+    <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    
     <style>
         * {
             margin: 0;
@@ -14,7 +17,20 @@
         body {
             background-color: #000000;
             padding: 2rem;
+            padding-top: 10em;
             color: white;
+        }
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: #e62b1e;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: bold;
         }
         .speaker-card {
             max-width: 600px;
@@ -31,21 +47,27 @@
             margin-bottom: 1.5rem;
         }
         h1 {
-            font-size: 2rem;
+            font-size: 5rem;
             color: #e62b1e;
         }
         .role {
-            font-size: 1.2rem;
+            font-size: 1.8rem;
             color: #ffffff;
         }
         .bio {
+            line-height: 30px;
             color: #cccccc;
-            max-width: 500px;
+            font-size: 1.2rem;
+            max-width: 1200px;
             margin: 1rem auto;
         }
     </style>
 </head>
+
 <body>
+    
+    <a href="index.html" class="back-button">&#8592; Back</a>
+    
     <div class="speaker-card">
         <img id="speaker-image" class="speaker-image" src="" alt="Speaker Image">
         <h1 id="speaker-name">Loading...</h1>
@@ -53,33 +75,143 @@
         <p id="speaker-bio" class="bio"></p>
     </div>
 
+
+
+    <section style="height: fit-content;color: #000; padding-bottom: 5px; z-index: 9;margin-top: 20vh;">
+        <footer id="#footer"  style="display:flex;height:90%;width:92%;margin-left:4%; margin-top: 2.5%;border-radius: 15px;padding: 20px 0;">
+            <div style="display:flex;justify-content:center;align-items: center;border-right:1px solid black; width:30%">
+              <img src="./logo-white.png" width="50%"/>
+            </div>
+            <div class="contact-section" style="padding: 2rem; border-right: 1px solid #000; width:700px;">
+              <p style='text-align: center; margin-bottom: 1.5rem; font-size: 2rem;font-family: "Bebas Neue", serif;'>Contact Us</p>
+              <div style="display: flex; gap: 0.5rem; margin-left: 1rem;justify-content: space-evenly;flex-wrap: wrap;">
+                <div style="font-size: 0.8rem;width: 40%;text-align: center;font-size: 1rem;">
+                  <p><strong>Muhammad Althaf</strong><br><a href="tel:8086396967">9061104922</a></p>
+                </div>
+                <div style="font-size: 0.8rem;width: 40%;text-align: center;font-size: 1rem;">
+                  <p><strong>Sona M S</strong><br><a href="tel:8078444278">9746585739</a></p>
+                </div>
+                <div style="font-size: 0.8rem;width: 40%;text-align: center;margin:10px ;font-size: 1rem;">
+                  <p><strong>Nandana U</strong><br><a href="tel:9497029288">7907513285</a></p>
+                </div>
+                <div style="font-size: 0.8rem;width: 40%;text-align: center;margin:10px ;font-size: 1rem;">
+                  <p><strong>Vyshnavy T M</strong><br><a href="tel:8590321385">8301904407</a></p>
+                </div>
+              </div>
+            </div>
+            <div class="footer3" style="width: 32%;padding-left: 3%;">
+                <div class="footer-third">
+                    <p style="font-family: 'Bebas Neue', serif; font-size: 2rem;">Send a Message</p>
+                    <div id="comment" style="display: flex; align-items: center; width: 100%; max-width: 500px; margin: auto;">
+                        <input 
+                            type="text" 
+                            placeholder="Type your message..." 
+                            style="background-color:#000; border:none;color: white; height: 40px; border-radius: 50px 0 0 50px; padding: 0 15px; width: 70%; font-size: 1rem; outline: none;margin: 15px 0;"
+                        >
+                        <button 
+                            style="background-color: #000;border:none; border-radius: 0 50px 50px 0; height: 40px; width: 50px; display: flex; align-items: center; justify-content: center; cursor: pointer;margin:0"
+                        >
+                            <i class="fas fa-paper-plane" style="color: white; font-size: 1.2rem;"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="footer-third">
+                  <p style="font-family: 'Bebas Neue', serif; font-size: 2rem;margin-bottom: 10px;">Follow Us</p>
+                  <div style="padding:0;margin:0">
+                      <a class="socials" href="https://www.instagram.com/tedxfisat25?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" style="text-decoration: none; color: #000;">
+                          <i class="fab fa-instagram" style="font-size: 24px;"></i>
+                      </a>
+                      <a class="socials" href="https://m.facebook.com/fisat.incepto/" style="text-decoration: none; color: #000; margin-left: 20px;">
+                        <i class="fab fa-facebook" style="font-size: 24px;"></i>
+                      </a>
+                      <a class="socials" href="https://x.com/TEDxFISAT2025" style="text-decoration: none; color: #000; margin-left: 20px;">
+                        <i class="fab fa-twitter" style="font-size: 24px;"></i>
+                      </a>
+                      <a class="socials" href="https://www.linkedin.com/company/tedxfisat/posts/?feedView=all" style="text-decoration: none; color: #000; margin-left: 20px;">
+                        <i class="fab fa-linkedin" style="font-size: 24px;"></i>
+                      </a>
+                  </div>
+                  
+                
+                </div>
+                
+            </div>
+        </footer>
+    </section>
     <script>
+        const speakers = [
+        {
+    name: "T D Ramakrishnan",
+    img: "./Speakers/hi.jpeg",
+    desc: `T D Ramakrishnan is a novelist, translator, and retired Chief Controller in Southern Railway. He has authored two best-selling Malayalam novels: Francis Itty Cora and Sugandhi Enna Andal Devanayaki. He is a recipient of the Kerala Sahitya Akademi Award and Vayalar Award.`,
+    role: "Novelist | Bramayugam script writer ",
+  },
+  {
+    name: "Anu Suraj",
+    img: "./Speakers/AnuSuraj.jpeg",
+    desc: `Dr Anu Suraj is a trauma-informed psychologist, social worker, and child rights advocate. She is the founder of Swaraksha and Aatmasaukhya, dedicated to mental health and child protection.`,
+    role: "Psychologist",
+  },
+  {
+    name: "Salini",
+    img: "./Speakers/salini.jpeg",
+    desc: `Salini is a prominent radio jockey from Kerala, best known for hosting Club FM's Star Jam show. In addition to her radio career, she is an author, having written the Malayalam book Poochakkuru, published in 2022.`,
+    role: "RJ | Author ",
+  },
+  {
+    name: "Anusha Andrews",
+    img: "./Speakers/AnushaAndrews.jpeg",
+    desc: `Anusha Andrews is a journalist recognized for her fearless political stance and insightful reporting. Passionate about social change, she actively addresses issues of gender and power, advocating for women in the political society.`,
+    role: "Journalist",
+  },
+  {
+    name: "Dr. Fathima Saheer",
+    img: "./Speakers/dr.jpg",
+    desc: `Dr. Fathima Saheer is a consultant pediatrician, parenting expert, and researcher. She shares insights on child development, positive parenting, and healthcare challenges through her YouTube channel and media appearances.`,
+    role: "Pediatrician | Parenting expert",
+  },
+  {
+    name: "C. Prathapmohan Nair",
+    img: "./Speakers/prathapmohan.jpeg",
+    desc: `C. Prathapmohan Nair is an urban planning, infrastructure, and sustainability expert with 25+ years of experience. A Certified PPP Specialist, he has worked with the World Bank, PwC, and ADB and currently consults for the UN (UNCCD) on sustainability and green financing. He has held leadership roles, including Executive Director (i/c) of KSID, and teaches at Rajagiri Business School and IIIC. A Distinguished Toastmaster, he also serves as District Administration Manager for District 121.`,
+    role: "Urban planner",
+  },
+  {
+    name: "Gouri Krishna",
+    img: "./Speakers/GouriKrishna.jpeg",
+    desc: `Gouri Krishna is an Integrative Nutrition Health Coach and Nutritionist with a triple major in Nutrition, Chemistry, and Human Development
+                from Mount Carmel College. Certified by the Institute for Integrative Nutrition (IIN), she is a Senior Nutritionist at Harmony Wellness Concepts and shares wellness insights via her Instagram, @umminity.`,
+    role: "Integrative nutrition health coach | Nutritionist",
+  },
+  {
+    name: "Rahib Mohamed",
+    img: "./Speakers/RahibMohamed.jpeg",
+    desc: `Rahib Mohamed, known as "Bheegaran," is a lifestyle wellness coach and fitness innovator from Kochi, India. A former civil engineer, he began his fitness journey in 2017, focusing on holistic well-being. As the founder of DayZero Wellness and co-founder of The Sol Wellness and Padel High Kochi, he promotes sustainable lifestyle transformations. His philosophy, "I train your MIND, your BODY follows," emphasizes mental strength as the key to physical fitness, inspiring a global wellness community.`,
+    role: "Lifestyle wellness coach",
+  },
+        ];
 
-const speakers = [
-    { name: "T D Ramakrishnan", img: "./Speakers/hi.jpeg", desc: "Renowned author and speaker.", role: "Author" },
-    { name: "Anu Suraj", img: "./Speakers/AnuSuraj.jpeg", desc: "Influential writer and thinker.", role: "Author" },
-    { name: "Gouri Krishna", img: "./Speakers/GouriKrishna.jpeg", desc: "Expert in literature and storytelling.", role: "Author" },
-    { name: "Salini", img: "./Speakers/salini.jpeg", desc: "Acclaimed poet and novelist.", role: "Author" }
-];
 
-const urlParams = new URLSearchParams(window.location.search);
-const speakerName = urlParams.get('speaker');
 
-if (speakerName) {
-    const speaker = speakers.find(s => s.name.toLowerCase() === speakerName.toLowerCase());
+        
 
-    if (speaker) {
-        document.getElementById("speaker-image").src = speaker.img;
-        document.getElementById("speaker-name").innerText = speaker.name;
-        document.getElementById("speaker-role").innerText = speaker.role;
-        document.getElementById("speaker-bio").innerText = speaker.desc;
-    } else {
-        console.error("Speaker not found!");
-    }
-} else {
-    console.error("No speaker specified in URL.");
-}
+        const urlParams = new URLSearchParams(window.location.search);
+        const speakerName = urlParams.get('speaker');
 
+        if (speakerName) {
+            const speaker = speakers.find(s => s.name.toLowerCase() === speakerName.toLowerCase());
+
+            if (speaker) {
+                document.getElementById("speaker-image").src = speaker.img;
+                document.getElementById("speaker-name").innerText = speaker.name;
+                document.getElementById("speaker-role").innerText = speaker.role;
+                document.getElementById("speaker-bio").innerText = speaker.desc;
+            } else {
+                console.error("Speaker not found!");
+            }
+        } else {
+            console.error("No speaker specified in URL.");
+        }
     </script>
 </body>
 </html>
