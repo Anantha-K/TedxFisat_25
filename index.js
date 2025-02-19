@@ -402,3 +402,55 @@ gsap.registerPlugin(ScrollTrigger);
 
 
 
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.to('.navbar', {
+  opacity: 1,
+  duration: 1,
+  ease: 'power2.out'
+});
+
+const menuToggle = document.querySelector('.menu-toggle');
+const mobileMenu = document.querySelector('.mobile-menu');
+const navLinks = document.querySelectorAll('.mobile-menu a');
+
+let isOpen = false;
+
+menuToggle.addEventListener('click', () => {
+  isOpen = !isOpen;
+  menuToggle.classList.toggle('active');
+  
+  if (isOpen) {
+    gsap.to(mobileMenu, {
+      visibility: 'visible',
+      opacity: 1,
+      duration: 0.5,
+      ease: 'power2.out'
+    });
+    
+    gsap.to(navLinks, {
+      opacity: 1,
+      y: 0,
+      duration: 0.5,
+      stagger: 0.1,
+      ease: 'power2.out'
+    });
+  } else {
+    gsap.to(navLinks, {
+      opacity: 0,
+      y: 20,
+      duration: 0.3,
+      stagger: 0.05,
+      ease: 'power2.in'
+    });
+    
+    gsap.to(mobileMenu, {
+      opacity: 0,
+      duration: 0.5,
+      ease: 'power2.in',
+      onComplete: () => {
+        mobileMenu.style.visibility = 'hidden';
+      }
+    });
+  }
+});
