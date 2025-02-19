@@ -3,7 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 
 body {
@@ -116,11 +116,11 @@ a[href^="tel"] {
   .navbar {
     display: none;
   }
-  
+
   .menu-toggle {
     display: block;
   }
-  
+
   .mobile-menu {
     display: block;
   }
@@ -238,6 +238,18 @@ footer::after {
     justify-content: center !important;
   }
 
+  /* .Speakers {
+    font-size: 1rem !important;
+  } */
+
+  #PEheading {
+    font-size: 2em !important;
+  }
+
+  #speakerHeading {
+    font-size: 2em !important;
+  }
+
   #comment {
     justify-content: center;
   }
@@ -262,9 +274,10 @@ footer::after {
     align-items: center;
     gap: 20px;
   }
-  .socials:hover{
-	cursor: pointer;
-	color:white;
+
+  .socials:hover {
+    cursor: pointer;
+    color: white;
   }
 
   .footer3 p {
@@ -638,13 +651,14 @@ footer::after {
 
 
 /* Speakers */
-container{
-  overflow: hidden;;
-width: 100vw;
-height: 100vh;
+container {
+  overflow: hidden;
+  ;
+  width: 100vw;
+  height: 100vh;
   font-family: 'Roboto', serif;
-  background: rgb(195,34,34);
-  background: linear-gradient(0deg, rgba(195,34,34,1) 0%, rgba(0,0,0,1) 100%);
+  background: rgb(195, 34, 34);
+  background: linear-gradient(0deg, rgba(195, 34, 34, 1) 0%, rgba(0, 0, 0, 1) 100%);
 }
 
 .carousel {
@@ -657,8 +671,8 @@ height: 100vh;
 
 .carousel-item {
   --items: 10;
-  --width: clamp(350px, 30vw,  300px);
-  --height: clamp(450px, 40vw,  400px);
+  --width: clamp(350px, 30vw, 300px);
+  --height: clamp(450px, 40vw, 400px);
   --x: calc(var(--active) * 800%);
   --y: calc(var(--active) * 200%);
   --rot: calc(var(--active) * 120deg);
@@ -678,7 +692,7 @@ height: 100vh;
   box-shadow: 0 10px 50px 10px rgba(0, 0, 0, .5);
   background: black;
   pointer-events: all;
-  transform:  translate(var(--x), var(--y)) rotate(var(--rot)) ;
+  transform: translate(var(--x), var(--y)) rotate(var(--rot));
   transition: transform .8s cubic-bezier(0, 0.02, 0, 1);
 
   .carousel-box {
@@ -830,7 +844,7 @@ height: 100vh;
   transition: transform .85s cubic-bezier(0, 0.02, 0, 1);
   display: none;
   pointer-events: none;
-  
+
   @media (pointer: fine) {
     display: block;
   }
@@ -843,83 +857,83 @@ height: 100vh;
 
 
 @media (max-width:480px) {
-  
+
   .carousel-item {
-      --items: 10;
-      --width: clamp(250px, 30vw,  300px);
-      --height: clamp(300px, 40vw,  400px);
-      --x: calc(var(--active) * 800%);
-      --y: calc(var(--active) * 200%);
-      --rot: calc(var(--active) * 120deg);
-      --opacity: calc(var(--zIndex) / var(--items) * 3 - 2);
-      overflow: hidden;
+    --items: 10;
+    --width: clamp(250px, 30vw, 300px);
+    --height: clamp(300px, 40vw, 400px);
+    --x: calc(var(--active) * 800%);
+    --y: calc(var(--active) * 200%);
+    --rot: calc(var(--active) * 120deg);
+    --opacity: calc(var(--zIndex) / var(--items) * 3 - 2);
+    overflow: hidden;
+    position: absolute;
+    z-index: var(--zIndex);
+    width: var(--width);
+    height: var(--height);
+    margin: calc(var(--height) * -0.5) 0 0 calc(var(--width) * -0.5);
+    border-radius: 10px;
+    top: 50%;
+    left: 50%;
+    user-select: none;
+    transform-origin: 0% 100%;
+    box-shadow: 0 10px 50px 10px rgba(0, 0, 0, .5);
+    background: black;
+    pointer-events: all;
+    transform: translate(var(--x), var(--y)) rotate(var(--rot));
+    transition: transform .8s cubic-bezier(0, 0.02, 0, 1);
+
+    .carousel-box {
       position: absolute;
-      z-index: var(--zIndex);
-      width: var(--width);
-      height: var(--height);
-      margin: calc(var(--height) * -0.5) 0 0 calc(var(--width) * -0.5);
-      border-radius: 10px;
-      top: 50%;
-      left: 50%;
-      user-select: none;
-      transform-origin: 0% 100%;
-      box-shadow: 0 10px 50px 10px rgba(0, 0, 0, .5);
-      background: black;
-      pointer-events: all;
-      transform:  translate(var(--x), var(--y)) rotate(var(--rot)) ;
-      transition: transform .8s cubic-bezier(0, 0.02, 0, 1);
-    
-      .carousel-box {
+      z-index: 1;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transition: opacity .8s cubic-bezier(0, 0.02, 0, 1);
+      opacity: var(--opacity);
+      font-family: 'Orelo-sw-db', serif;
+
+      &:before {
+        content: '';
         position: absolute;
         z-index: 1;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        transition: opacity .8s cubic-bezier(0, 0.02, 0, 1);
-        opacity: var(--opacity);
-        font-family: 'Orelo-sw-db', serif;
-    
-        &:before {
-          content: '';
-          position: absolute;
-          z-index: 1;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          background: linear-gradient(to bottom, rgba(0, 0, 0, .3), rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, .5));
-        }
-      }
-    
-      .title {
-        position: absolute;
-        z-index: 1;
-        color: #fff;
-        bottom: 20px;
-        left: 20px;
-        transition: opacity .8s cubic-bezier(0, 0.02, 0, 1);
-        font-size: clamp(20px, 3vw, 30px);
-        text-shadow: 0 4px 4px rgba(0, 0, 0, .1);
-      }
-    
-      .num {
-        position: absolute;
-        z-index: 1;
-        color: #fff;
-        top: 10px;
-        left: 20px;
-        transition: opacity .8s cubic-bezier(0, 0.02, 0, 1);
-        font-size: clamp(20px, 10vw, 80px);
-      }
-    
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        pointer-events: none;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, .3), rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, .5));
       }
     }
+
+    .title {
+      position: absolute;
+      z-index: 1;
+      color: #fff;
+      bottom: 20px;
+      left: 20px;
+      transition: opacity .8s cubic-bezier(0, 0.02, 0, 1);
+      font-size: clamp(20px, 3vw, 30px);
+      text-shadow: 0 4px 4px rgba(0, 0, 0, .1);
+    }
+
+    .num {
+      position: absolute;
+      z-index: 1;
+      color: #fff;
+      top: 10px;
+      left: 20px;
+      transition: opacity .8s cubic-bezier(0, 0.02, 0, 1);
+      font-size: clamp(20px, 10vw, 80px);
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      pointer-events: none;
+    }
+  }
 }
 
 
@@ -954,7 +968,7 @@ height: 100vh;
   top: -10px;
   left: 50%;
   transform: translateX(-50%);
-  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 
