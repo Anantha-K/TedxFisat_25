@@ -477,3 +477,29 @@ gsap.fromTo(
     }
 );
 
+
+
+function updateCountdown() {
+    const eventDate = new Date("March 12, 2025 00:00:00").getTime();
+    const now = new Date().getTime();
+    const timeLeft = eventDate - now;
+
+    const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+    document.getElementById("days").textContent = days < 10 ? "0" + days : days;
+    document.getElementById("hours").textContent = hours < 10 ? "0" + hours : hours;
+    document.getElementById("minutes").textContent = minutes < 10 ? "0" + minutes : minutes;
+    document.getElementById("seconds").textContent = seconds < 10 ? "0" + seconds : seconds;
+}
+
+setInterval(updateCountdown, 1000);
+updateCountdown();
+
+gsap.from("#home h1", { opacity: 0, y: -50, duration: 1 });
+gsap.from("#home p", { opacity: 0, y: 50, duration: 1, delay: 0.5 });
+gsap.from(".circle", { scale: 0, duration: 1.5, stagger: 0.3, ease: "elastic.out(1, 0.5)" });
+
+

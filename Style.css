@@ -23,6 +23,8 @@ a[href^="tel"] {
 
 
 
+
+
 .navbar {
   display: flex;
   justify-content: space-evenly;
@@ -39,6 +41,8 @@ a[href^="tel"] {
   height: 10vh;
   border: 0.5px solid rgba(157, 159, 161, 0.5);
 }
+
+
 
 .navbar a {
   color: white;

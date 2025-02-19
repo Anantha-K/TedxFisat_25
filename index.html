@@ -68,14 +68,54 @@
           <a href="#footer">CONTACT US</a>
       </div>
   </div>
+  <!-- <section id="home" style="width: 100vw; height: 100vh; overflow: hidden; z-index: -1; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
+    <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%;">
+        <h1 style="color: #E62B1E; font-size: 6rem; margin-bottom: 0.5rem;">TEDx<span style="color: white;">FISAT</span></h1>
+        <p style="color: white; font-size: 1.5rem; margin: 0;">Federal Institute of Science and Technology</p>
+    </div>
 
-    <section id="home" style="width: 100vw; height: 100vh;  overflow: hidden;z-index: -1;">
-   
-        <div class="circle" style="position:fixed;width:300px;height:300px;background-color: #E62B1E;border-radius: 100%;left: calc(100vw - 150px);top: calc(100vh - 150px);z-index: 3;box-shadow: 0 0 10px rgba(0, 0, 0,0.25);"></div>
-        <div class="circle" style="position:fixed;width:350px;height:350px;background-color: #E62B1E;border-radius: 100%;left: calc(100vw - 175px);top: calc(100vh - 175px);z-index: 2;opacity: 0.6;box-shadow: 0 0 10px rgba(0, 0, 0,0.25);"></div>
-        <div class="circle" style="position:fixed;width:400px;height:400px;background-color: #E62B1E;border-radius: 100%;left: calc(100vw - 200px);top: calc(100vh - 200px);z-index: 1;opacity: 0.6;box-shadow: 0 0 10px rgba(0, 0, 0,0.1);"></div>
-        <div class="circle" style="position:fixed;width:450px;height:450px;background-color: #E62B1E;border-radius: 100%;left: calc(100vw - 225px);top: calc(100vh - 225px);z-index: 0;opacity: 0.7;box-shadow: 0 0 10px rgba(0, 0, 0,0.1);"></div>
-    </section>
+    <div class="circle" style="position: fixed; width: 300px; height: 300px; background-color: #E62B1E; border-radius: 100%; left: calc(100vw - 150px); top: calc(100vh - 150px); z-index: 3; box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);"></div>
+    <div class="circle" style="position: fixed; width: 350px; height: 350px; background-color: #E62B1E; border-radius: 100%; left: calc(100vw - 175px); top: calc(100vh - 175px); z-index: 2; opacity: 0.6; box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);"></div>
+    <div class="circle" style="position: fixed; width: 400px; height: 400px; background-color: #E62B1E; border-radius: 100%; left: calc(100vw - 200px); top: calc(100vh - 200px); z-index: 1; opacity: 0.6; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);"></div>
+    <div class="circle" style="position: fixed; width: 450px; height: 450px; background-color: #E62B1E; border-radius: 100%; left: calc(100vw - 225px); top: calc(100vh - 225px); z-index: 0; opacity: 0.7; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);"></div>
+</section> -->
+<section id="home" style="width: 100vw; height: 100vh; overflow: hidden; z-index: -1; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
+  <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; padding: 20px; text-align: center;">
+    <h1 style="color: #E62B1E; font-size: clamp(2rem, 8vw, 6rem); margin-bottom: 0.5rem;">TEDx<span style="color: white;">FISAT</span></h1>
+    <p style="color: white; font-size: clamp(1rem, 3vw, 1.5rem); margin: 0;">Federal Institute of Science and Technology</p>
+    <p style="color: white; font-size: clamp(1rem, 3vw, 1.5rem); margin-bottom: 1rem;">March 12, 2025</p>
+
+    <div id="countdown" style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 1rem; font-size: clamp(1.5rem, 4vw, 2rem); color: white; justify-content: center;">
+        <div class="time-box" style="background: rgba(255, 255, 255, 0.1); padding: 8px 15px; border-radius: 10px; backdrop-filter: blur(5px); min-width: 80px;">
+            <span id="days" style="font-size: clamp(2rem, 5vw, 2.5rem); font-weight: bold;">00</span> Days
+        </div>
+        <div class="time-box" style="background: rgba(255, 255, 255, 0.1); padding: 8px 15px; border-radius: 10px; backdrop-filter: blur(5px); min-width: 80px;">
+            <span id="hours" style="font-size: clamp(2rem, 5vw, 2.5rem); font-weight: bold;">00</span> Hours
+        </div>
+        <div class="time-box" style="background: rgba(255, 255, 255, 0.1); padding: 8px 15px; border-radius: 10px; backdrop-filter: blur(5px); min-width: 80px;">
+            <span id="minutes" style="font-size: clamp(2rem, 5vw, 2.5rem); font-weight: bold;">00</span> Minutes
+        </div>
+        <div class="time-box" style="background: rgba(255, 255, 255, 0.1); padding: 8px 15px; border-radius: 10px; backdrop-filter: blur(5px); min-width: 80px;">
+            <span id="seconds" style="font-size: clamp(2rem, 5vw, 2.5rem); font-weight: bold;">00</span> Seconds
+        </div>
+    </div>
+
+    <a href="#" style="margin-top: 2rem; padding: 12px 25px; font-size: clamp(1rem, 4vw, 1.5rem); color: white; background-color: #E62B1E; border: none; border-radius: 10px; text-decoration: none; font-weight: bold; transition: 0.3s; box-shadow: 0 5px 15px rgba(230, 43, 30, 0.5);">
+        Grab Early Tickets
+    </a>
+</div>
+
+
+
+
+  <div class="circle" style="position: fixed; width: 300px; height: 300px; background-color: #E62B1E; border-radius: 100%; left: calc(100vw - 150px); top: calc(100vh - 150px); z-index: 3; box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);"></div>
+  <div class="circle" style="position: fixed; width: 350px; height: 350px; background-color: #E62B1E; border-radius: 100%; left: calc(100vw - 175px); top: calc(100vh - 175px); z-index: 2; opacity: 0.6; box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);"></div>
+  <div class="circle" style="position: fixed; width: 400px; height: 400px; background-color: #E62B1E; border-radius: 100%; left: calc(100vw - 200px); top: calc(100vh - 200px); z-index: 1; opacity: 0.6; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);"></div>
+  <div class="circle" style="position: fixed; width: 450px; height: 450px; background-color: #E62B1E; border-radius: 100%; left: calc(100vw - 225px); top: calc(100vh - 225px); z-index: 0; opacity: 0.7; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);"></div>
+</section>
+
+
+
 
     
     <section id="Nothome" style="height: 100vh;"></section>
@@ -114,11 +154,11 @@
       <div class="section-wrapper" id="section-wrapper-2">
           <div class="About-img-wrapper">
               <div style="background: linear-gradient(135deg, #8B0000, #E62B1E);"></div>
-              <img src="./ak.jpg" alt="Logo" style="border-radius: 5px;">
+              <img src="./fisat-ernakulam-dormitory-services-ytvnq1txkk.jpg.avif" alt="Logo" style="border-radius: 5px;">
           </div>
           <div class="about-text" style="width: 70%;">
-              <p class="reveal-heading" style='font-family: "Bebas Neue", serif;'>
-                  TEDx <span>FISAT</span>
+              <p class="reveal-heading" style='font-family: "Bebas Neue", serif; color:#E62B1E ;'>
+                  TEDx<span style="color: white;">FISAT</span>
               </p>
               <p class="reveal-text" data-bg-color="#606060" data-fg-color="white" style='font-family: "Montserrat", serif;'>
                 In the world of TED, there are ideas, and then there are ideas worth spreading. TEDxFISAT is the local manifestation of this global ethos, bringing together a carefully curated roster of visionaries, innovators, and disruptors to spark conversations that matter. Each year, TEDxFISAT stands as a platform where groundbreaking ideas meet the people who make them happen, and 2025 will be no different.
