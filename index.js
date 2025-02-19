@@ -376,9 +376,9 @@ gsap.registerPlugin(ScrollTrigger);
         
         
         // document.addEventListener('mousewheel', handleWheel)
-        // document.addEventListener('mousedown', handleMouseDown)
-        // document.addEventListener('mousemove', handleMouseMove)
-        // document.addEventListener('mouseup', handleMouseUp)
+        document.addEventListener('mousedown', handleMouseDown)
+        document.addEventListener('mousemove', handleMouseMove)
+        document.addEventListener('mouseup', handleMouseUp)
         document.addEventListener('touchstart', handleMouseDown)
         document.addEventListener('touchmove', handleMouseMove)
         document.addEventListener('touchend', handleMouseUp)
@@ -399,3 +399,6 @@ gsap.registerPlugin(ScrollTrigger);
         //   }
       
         //   requestAnimationFrame(raf);
+
+
+
