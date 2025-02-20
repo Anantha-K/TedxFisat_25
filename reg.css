@@ -27,9 +27,7 @@ body {
     height: 150px;
 }
 
-#register:hover {
-    cursor: not-allowed;
-}
+
 
 .header {
     text-align: center;
