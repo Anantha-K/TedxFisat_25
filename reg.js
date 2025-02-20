@@ -142,7 +142,7 @@ document.addEventListener('DOMContentLoaded', async function() {
     const registerButton = document.getElementById('register');
     
     try {
-        const response = await fetch('http://your-api-url/registration-count');
+        const response = await fetch('https://registration-lhy3.onrender.com/registration-count');
         const data = await response.json();
         
         if (data.count >= 10) {
