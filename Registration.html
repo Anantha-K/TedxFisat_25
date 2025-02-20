@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TEDx Registration</title>
     <link href="reg.css" rel="stylesheet">
+   
 </head>
 <body>
     <div class="container">
@@ -42,28 +43,26 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="isStudent">Are you a student?</label>
-                    <select id="isStudent" required onchange="toggleAcademicSection()">
+                    <label for="isFisatian">Are you a FISAT student?</label>
+                    <select id="isFisatian" required onchange="toggleAcademicSection()">
                         <option value="">Please select</option>
                         <option value="yes">Yes</option>
                         <option value="no">No</option>
                     </select>
                 </div>
 
-                <div class="form-group" id="occupationGroup" style="display: none;">
-                    <label for="occupation">Occupation</label>
-                    <input type="text" id="occupation" placeholder="Enter your occupation">
+                <div class="form-group" id="roleGroup" style="display: none;">
+                    <label for="role">Role/Profession</label>
+                    <input type="text" id="role" placeholder="Enter your role/profession">
                 </div>
             </div>
             
             <div id="academicSection">
                 <div class="section-title">Academic Information</div>
+                <div class="notice-box" style="background: #f8f9fa; padding: 10px; margin: 10px 0; border-radius: 4px; border: 1px solid #dee2e6;">
+                    <strong>Note:</strong> Please bring your FISAT ID card on the event day for verification.
+                </div>
                 <div class="form-grid">
-                    <div class="form-group">
-                        <label for="college">College Name</label>
-                        <input type="text" id="college" placeholder="Enter your college name">
-                    </div>
-                    
                     <div class="form-group">
                         <label for="branch">Branch</label>
                         <select id="branch">
@@ -95,6 +94,21 @@
             </div>
             
             <div class="section-title">Payment Details</div>
+            <div class="payment-instructions">
+                <p><strong>Payment Instructions:</strong></p>
+                <ol>
+                    <li>Scan the QR code below using any UPI payment app</li>
+                    <li>UPI ID: <span class="upi-id">www.nizamudheen@okaxis</span></li>
+                    <li>Take a screenshot of your payment confirmation</li>
+                    <li>Upload the screenshot below</li>
+                </ol>
+                <h1 style="text-align: center;">Early Bird: <span style="color: red;"> ₹ 699</span></h1>
+            </div>
+            
+            <div class="payment-qr">
+                <img src="PHOTO-2025-02-20-14-32-09.jpg" alt="UPI Payment QR Code">
+            </div>
+
             <div class="form-group">
                 <label for="payment">Upload Payment Screenshot</label>
                 <div class="file-upload">
@@ -108,21 +122,21 @@
 
     <script>
         function toggleAcademicSection() {
-            const isStudent = document.getElementById('isStudent').value;
+            const isFisatian = document.getElementById('isFisatian').value;
             const academicSection = document.getElementById('academicSection');
-            const occupationGroup = document.getElementById('occupationGroup');
+            const roleGroup = document.getElementById('roleGroup');
             const academicInputs = academicSection.querySelectorAll('input, select');
 
-            if (isStudent === 'yes') {
+            if (isFisatian === 'yes') {
                 academicSection.style.display = 'block';
-                occupationGroup.style.display = 'none';
+                roleGroup.style.display = 'none';
                 academicInputs.forEach(input => input.required = true);
-                document.getElementById('occupation').required = false;
-            } else if (isStudent === 'no') {
+                document.getElementById('role').required = false;
+            } else if (isFisatian === 'no') {
                 academicSection.style.display = 'none';
-                occupationGroup.style.display = 'block';
+                roleGroup.style.display = 'block';
                 academicInputs.forEach(input => input.required = false);
-                document.getElementById('occupation').required = true;
+                document.getElementById('role').required = true;
             }
         }
     </script>
