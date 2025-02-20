@@ -27,7 +27,10 @@ body {
     height: 150px;
 }
 
-
+button:disabled {
+    background-color: #ccc !important;
+    cursor: not-allowed !important;
+}
 
 .header {
     text-align: center;
