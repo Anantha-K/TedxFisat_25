@@ -277,6 +277,7 @@ footer::after {
     gap: 20px;
   }
 
+
   .socials:hover {
     cursor: pointer;
     color: white;
@@ -742,7 +743,8 @@ container {
     transition: opacity .8s cubic-bezier(0, 0.02, 0, 1);
     font-size: clamp(20px, 10vw, 80px);
   }
-  .num a{
+
+  .num a {
     translate: -3px -9px;
   }
 
@@ -752,16 +754,16 @@ container {
     left: 50%;
     transform: translateX(-50%);
     z-index: 4;
-}
+  }
 
-#flipdown {
+  #flipdown {
     background-color: rgba(255, 255, 255, 0.9);
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0,0,0,0.2);
-}
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  }
 
-  .num a:hover{
+  .num a:hover {
     cursor: pointer;
   }
 
@@ -1035,4 +1037,10 @@ container {
   color: #666;
 }
 
+.socials {
+  z-index: 100 !important;
+}
 
+/* #home {
+  background: url("./IMG_5670.jpg");
+} */
