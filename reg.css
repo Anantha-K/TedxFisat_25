@@ -278,7 +278,36 @@ select {
   
   
   
-  
+.payment-qr {
+    text-align: center;
+    margin: 20px 0;
+    width: 100%;
+}
+
+.payment-qr img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin: 10px auto;
+    border-radius: 12px;
+    padding: 15px;
+    background: #fff;
+    display: block;
+}
+
+@media (max-width: 480px) {
+    .payment-qr img {
+        max-width: 250px;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 360px) {
+    .payment-qr img {
+        max-width: 200px;
+        padding: 8px;
+    }
+}
   
   
   
