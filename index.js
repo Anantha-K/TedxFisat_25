@@ -519,4 +519,7 @@ gsap.from("#home h1", { opacity: 0, y: -50, duration: 1 });
 gsap.from("#home p", { opacity: 0, y: 50, duration: 1, delay: 0.5 });
 gsap.from(".circle", { scale: 0, duration: 1.5, stagger: 0.3, ease: "elastic.out(1, 0.5)" });
 
-
+// if(window.innerWidth<=480){
+//     const tick = document.getElementById("ticc")
+//     // tick.src = ticc
+// }

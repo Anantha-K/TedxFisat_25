@@ -266,6 +266,12 @@ footer::after {
     font-size: 1rem !important;
   } */
 
+  /* #ticc {
+    transform: rotate(90deg);
+    width: auto !important;
+    height: 50vw;
+  } */
+
   #PEheading {
     font-size: 2em !important;
   }
@@ -906,6 +912,14 @@ container {
 
   #home {
     background: url("./landingPhone.webp");
+  }
+
+  #ticc {
+    content: url("./prev/tickMob.jpeg");
+  }
+
+  #regHome>a>button {
+    left: calc(50vw - 50px) !important
   }
 
   .carousel-item {
