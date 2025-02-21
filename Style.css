@@ -251,6 +251,7 @@ footer::after {
 .footer-third a {
   text-decoration: none;
   color: #000;
+  z-index: 100;
 }
 
 @media screen and (max-width: 480px) {
@@ -304,12 +305,14 @@ footer::after {
     justify-content: center;
     align-items: center;
     gap: 20px;
+    z-index: 100;
   }
 
 
   .socials:hover {
     cursor: pointer;
     color: white;
+    z-index: 200;
   }
 
   .footer3 p {
