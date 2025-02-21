@@ -38,8 +38,25 @@ gsap.fromTo(
         scale: 1,
     },
     {
-        opacity:0,
         scale: 6,
+        scrollTrigger: {
+            trigger: "#Nothome",
+            start: "top bottom", 
+            end: "bottom center",
+            scrub: 1,            
+            // markers: true,
+            //toggleActions: "play none none reverse"
+        },
+    }
+);
+
+gsap.fromTo(
+    "#home",
+    {
+        opacity:1
+    },
+    {
+        opacity: 0,
         scrollTrigger: {
             trigger: "#Nothome",
             start: "top bottom", 

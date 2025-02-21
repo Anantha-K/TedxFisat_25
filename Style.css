@@ -19,8 +19,10 @@ a[href^="tel"] {
 
 
 #home {
-  position: relative;
-  overflow: hidden;
+  position: sticky;
+  top: 0;
+  background: url("./landingDesk.webp");
+  object-fit: cover;
 }
 
 #home::before {
@@ -902,6 +904,10 @@ container {
 
 @media (max-width:480px) {
 
+  #home {
+    background: url("./landingPhone.webp");
+  }
+
   .carousel-item {
     --items: 10;
     --width: clamp(250px, 30vw, 300px);
@@ -1059,11 +1065,4 @@ container {
 
 .socials {
   z-index: 100 !important;
-}
-
-#home {
-  position: sticky;
-  top: 0;
-  background: url("./landing-min.webp");
-  /* object-fit: cover; */
 }
