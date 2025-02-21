@@ -1061,6 +1061,9 @@ container {
   z-index: 100 !important;
 }
 
-/* #home {
-  background: url("./IMG_5670.jpg");
-} */
+#home {
+  position: sticky;
+  top: 0;
+  background: url("./landing-min.webp");
+  /* object-fit: cover; */
+}
