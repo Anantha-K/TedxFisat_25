@@ -922,7 +922,7 @@ container {
   }
 
   #ticc {
-    content: url("./tickMob.webp");
+    content: url("./allAssets/Reg/tickMob.webp");
   }
 
   #regHome>a>button {
