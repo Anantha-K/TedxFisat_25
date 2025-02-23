@@ -426,17 +426,35 @@ gsap.to('.navbar', {
   duration: 1,
   ease: 'power2.out'
 });
-
 const menuToggle = document.querySelector('.menu-toggle');
 const mobileMenu = document.querySelector('.mobile-menu');
-const navLinks = document.querySelectorAll('.mobile-menu a');
-
+const navLinks = document.querySelectorAll('.mobile-menu .nav-links a');
 let isOpen = false;
+
+const closeMenu = () => {
+  console.log('Closing menu'); 
+  isOpen = false;
+  menuToggle.classList.remove('active');
+  gsap.to(navLinks, {
+    opacity: 0,
+    y: 20,
+    duration: 0.3,
+    stagger: 0.05,
+    ease: 'power2.in'
+  });
+  gsap.to(mobileMenu, {
+    opacity: 0,
+    duration: 0.5,
+    ease: 'power2.in',
+    onComplete: () => {
+      mobileMenu.style.visibility = 'hidden';
+    }
+  });
+};
 
 menuToggle.addEventListener('click', () => {
   isOpen = !isOpen;
   menuToggle.classList.toggle('active');
-  
   if (isOpen) {
     gsap.to(mobileMenu, {
       visibility: 'visible',
@@ -444,7 +462,6 @@ menuToggle.addEventListener('click', () => {
       duration: 0.5,
       ease: 'power2.out'
     });
-    
     gsap.to(navLinks, {
       opacity: 1,
       y: 0,
@@ -453,25 +470,15 @@ menuToggle.addEventListener('click', () => {
       ease: 'power2.out'
     });
   } else {
-    gsap.to(navLinks, {
-      opacity: 0,
-      y: 20,
-      duration: 0.3,
-      stagger: 0.05,
-      ease: 'power2.in'
-    });
-    
-    gsap.to(mobileMenu, {
-      opacity: 0,
-      duration: 0.5,
-      ease: 'power2.in',
-      onComplete: () => {
-        mobileMenu.style.visibility = 'hidden';
-      }
-    });
+    closeMenu();
   }
 });
 
+navLinks.forEach(link => {
+  link.addEventListener('click', (e) => {
+    closeMenu();
+  });
+});
 
 
 
