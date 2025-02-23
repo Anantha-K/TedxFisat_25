@@ -34,7 +34,6 @@ a[href^="tel"] {
   height: 100%;
   /* background-image: url(./VIDEO-2025-02-20-15-50-09.mp4); */
   background-image: url(./page.png);
-  filter: brightness(40%);
   background-size: cover;
   background-position: center;
   filter: blur(px);
